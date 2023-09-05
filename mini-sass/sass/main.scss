@@ -1,0 +1,26 @@
+@import 'color.css';
+
+@mixin box-design($backC, $maxW, $width, $marg)  {
+    background-color: $backC;
+    max-width: $maxW;
+    width: $width;
+    margin: $marg;
+}
+
+header {
+    background-color: rgb(81, 81, 187);
+    padding: 1rem;
+
+    h1 {
+        color: rgb(241, 239, 235);
+
+        &:hover {
+            color: bisque;
+        }
+    }
+}
+
+main{
+    @include box-design(blue, 600px, 100%, 0 auto);
+    height: 300px;
+}
